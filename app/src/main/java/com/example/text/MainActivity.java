@@ -26,33 +26,33 @@ public class MainActivity extends AppCompatActivity {
         h = (EditText) findViewById(R.id.ed_height);
         w = (EditText) findViewById(R.id.ed_wegiht);
     }
-    public void show(View view) {
-
-        double w_value = Double.parseDouble(w.getText().toString());
-        double h_value = Double.parseDouble(h.getText().toString());
-        double bmi = w_value / (h_value/100.0 * h_value/100.0);
-
-        ImageView view1 = (ImageView) findViewById(R.id.imageView);
-
-        DecimalFormat df = new DecimalFormat("#.##");
-        TextView b = findViewById(R.id.tv_showbmi);
-
-        String msg="";
-        if(bmi<18.5){
-            msg="體重過輕!";
-            Toast.makeText(this, "要多吃肉肉囉", Toast.LENGTH_LONG).show();
-            view1.setImageResource(R.drawable.bmi1);
-        }else if(bmi>24){
-            msg="體重過重";
-            Toast.makeText(this, "要少吃肉肉囉!", Toast.LENGTH_LONG).show();
-            view1.setImageResource(R.drawable.bmi3);
-        }else {
-            msg="體重正常";
-            Toast.makeText(this, "繼續保持呦~", Toast.LENGTH_SHORT).show();
-            view1.setImageResource(R.drawable.bmi2);
-        }
-        b.setText(name.getText().toString() + "你的BMI是" + df.format(bmi) + msg);
-    }
+//    public void show(View view) {
+//
+//        double w_value = Double.parseDouble(w.getText().toString());
+//        double h_value = Double.parseDouble(h.getText().toString());
+//        double bmi = w_value / (h_value/100.0 * h_value/100.0);
+//
+//        ImageView view1 = (ImageView) findViewById(R.id.imageView);
+//
+//        DecimalFormat df = new DecimalFormat("#.##");
+//        TextView b = findViewById(R.id.tv_showbmi);
+//
+//        String msg="";
+//        if(bmi<18.5){
+//            msg="體重過輕!";
+//            Toast.makeText(this, "要多吃肉肉囉", Toast.LENGTH_LONG).show();
+//            view1.setImageResource(R.drawable.bmi1);
+//        }else if(bmi>24){
+//            msg="體重過重";
+//            Toast.makeText(this, "要少吃肉肉囉!", Toast.LENGTH_LONG).show();
+//            view1.setImageResource(R.drawable.bmi3);
+//        }else {
+//            msg="體重正常";
+//            Toast.makeText(this, "繼續保持呦~", Toast.LENGTH_SHORT).show();
+//            view1.setImageResource(R.drawable.bmi2);
+//        }
+//        b.setText(name.getText().toString() + "你的BMI是" + df.format(bmi) + msg);
+//    }
 
     public void nextPage(View view) {
         Bundle bundle = new Bundle();
